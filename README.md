@@ -32,17 +32,13 @@ floating-point and integer workloads.
   [Targets](https://pulp-platform.github.io/carfield/tg).
 * For detailed information on Carfield's inner workings, consult the [User
   Manual](https://pulp-platform.github.io/carfield/um/).
-
-Setup the environment:
-
-```
-source env/env-iis.sh
-```
+  
 
 If you are impatient and have all needed
 [dependencies](https://pulp-platform.github.io/carfield/gs/#dependencies), type:
 
 ```
+source env/env-iis.sh
 make car-all PYTHON=python3
 ```
 
