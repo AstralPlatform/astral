@@ -90,6 +90,13 @@ packages:
       Git: https://github.com/pulp-platform/axi_slice.git
     dependencies:
     - common_cells
+  axi_stream:
+    revision: 54891ff40455ca94a37641b9da4604647878cc07
+    version: 0.1.1
+    source:
+      Git: git@github.com:pulp-platform/axi_stream.git
+    dependencies:
+    - common_cells
   axi_vga:
     revision: 3718b9930f94a9eaad8ee50b4bccc71df0403084
     version: 0.1.3
@@ -106,7 +113,7 @@ packages:
       Git: https://github.com/AlSaqr-platform/can_bus.git
     dependencies: []
   cheshire:
-    revision: 6d389373df6b54c09888f89411b7e231d2430722
+    revision: 945d0a6e34437d35fedfab7c923bbab62d89433c
     version: null
     source:
       Git: https://github.com/pulp-platform/cheshire.git
@@ -162,8 +169,8 @@ packages:
     dependencies:
     - hci
   common_cells:
-    revision: ad22699793d98ef714f120c6268fe92d096a61e1
-    version: 1.33.1
+    revision: 0d67563b6b592549542544f1abc0f43e5d4ee8b4
+    version: 1.35.0
     source:
       Git: https://github.com/pulp-platform/common_cells.git
     dependencies:
@@ -259,8 +266,8 @@ packages:
     dependencies:
     - tech_cells_generic
   hwpe-stream:
-    revision: bcb4435f802add732f557dc7fa1c6b5dd8854458
-    version: 1.7.1
+    revision: 65c99a4a2f37a79acee800ab0151f67dfb1edef1
+    version: 1.8.0
     source:
       Git: https://github.com/pulp-platform/hwpe-stream.git
     dependencies:
@@ -289,14 +296,16 @@ packages:
       Git: https://github.com/pulp-platform/icache-intc.git
     dependencies: []
   idma:
-    revision: ca1b28816a3706be0bf9ce01378246d5346384f0
-    version: 0.5.1
+    revision: d6245c8bf8faa7a4d44325d6584387170413d53d
+    version: 0.6.0
     source:
       Git: https://github.com/pulp-platform/idma.git
     dependencies:
     - axi
+    - axi_stream
     - common_cells
     - common_verification
+    - obi
     - register_interface
   irq_router:
     revision: d1d31350b24f3965b3a51e1bc96c71eb34e94db3
@@ -364,13 +373,17 @@ packages:
     dependencies:
     - axi_slice
   pulp-ethernet:
-    revision: bdc8031ab270a49da28df269266ce9ab9a133636
+    revision: 28fd13f7887c9bf0e9548b56a8706378c9cc01cd
     version: null
     source:
       Git: https://github.com/pulp-platform/pulp-ethernet.git
     dependencies:
     - axi
+    - axi_stream
+    - common_cells
     - common_verification
+    - idma
+    - register_interface
   pulp_cluster:
     revision: 3cd3e83fdd7a791e8ae54aef39423004581c8a48
     version: null
