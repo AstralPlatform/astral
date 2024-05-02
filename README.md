@@ -39,6 +39,7 @@ If you are impatient and have all needed
 
 ```
 source env/env-iis.sh
+bender update
 make car-all PYTHON=python3
 ```
 
