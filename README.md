@@ -47,7 +47,7 @@ typing:
 
 ```tcl
 make car-vsim-sim-build
-make car-vsim-sim-run CHS_BINARY=./sw/tests/bare-metal/hostd/helloworld.car.l2.elf
+make car-vsim-sim-run CHS_BINARY=./sw/tests/bare-metal/hostd/helloworld.car.l2.elf DEBUG=1
 ```
 
 ---
