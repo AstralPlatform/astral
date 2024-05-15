@@ -17,8 +17,8 @@ dependencies:
   hyperbus:           { git: https://github.com/pulp-platform/hyperbus.git,             rev: f039e601c8b6590181734e6d26ff8b77aa380412 } # branch: chi/add_fsm_with_Tcsh
   dyn_mem:            { git: https://github.com/pulp-platform/dyn_spm.git,              rev: 480590062742230dc9bd4050358a15b4747bdf34 } # branch: main
   safety_island:      { git: https://github.com/pulp-platform/safety_island.git,        rev: aaef55c798ab53560faaf451a86668fa1e6d0f3b } # branch: carfield
-  pulp_cluster:       { git: https://github.com/pulp-platform/pulp_cluster.git,         rev: e7a99bb56e3eb57c115c12f0719ec9d9fb4ababa } # branch: astral
-  opentitan:          { git: https://github.com/pulp-platform/opentitan.git,            rev: 3682dfcc08281ff6de5bf629368ab612fd17f0de } # branch: mc/astral
+  pulp_cluster:       { git: https://github.com/pulp-platform/pulp_cluster.git,         rev: 6417d215fdca9a91935998c5623e212e8d29723c } # branch: astral
+  opentitan:          { git: https://github.com/pulp-platform/opentitan.git,            rev: faca6f28e20195e9b56eb822c58bec4a3a19dd4f } # branch: mc/astral
   mailbox_unit:       { git: https://github.com/pulp-platform/mailbox_unit.git,         version: 1.1.0                                }
   apb:                { git: https://github.com/pulp-platform/apb.git,                  version: 0.2.3                                }
   timer_unit:         { git: https://github.com/pulp-platform/timer_unit.git,           version: 1.0.2                                }
@@ -28,7 +28,7 @@ dependencies:
   common_cells:       { git: https://github.com/pulp-platform/common_cells.git,         version: 1.31.1                               }
   pulp-ethernet:      { git: https://github.com/pulp-platform/pulp-ethernet.git,        rev: bdc8031ab270a49da28df269266ce9ab9a133636 } # branch: carfield
   riscv-dbg:          { git: https://github.com/pulp-platform/riscv-dbg.git,            version: =0.8.0                               }
-  streamer:           { git: https://gitlab.thalesdigital.io/musa/streamer.git,         rev: 791ed68ebf97d81e6c16ef501711ab306a694ba8 } # branch: HPTME_implementation
+  streamer:           { git: https://gitlab.thalesdigital.io/musa/streamer.git,         rev: cada26410f945d1e57e2891c837425275b5a464c } # branch: HPTME_implementation
 
 workspace:
   package_links:
