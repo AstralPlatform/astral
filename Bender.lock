@@ -339,7 +339,7 @@ packages:
     dependencies:
     - common_cells
   neureka:
-    revision: 4f201c238c7dd0c1f84306f40d66ebdaa8589307
+    revision: 6221fd4d17809166333ace71aec37b58ac28ce72
     version: null
     source:
       Git: https://github.com/pulp-platform/neureka.git
@@ -357,7 +357,7 @@ packages:
     - common_cells
     - common_verification
   opentitan:
-    revision: 3682dfcc08281ff6de5bf629368ab612fd17f0de
+    revision: faca6f28e20195e9b56eb822c58bec4a3a19dd4f
     version: null
     source:
       Git: https://github.com/pulp-platform/opentitan.git
@@ -391,7 +391,7 @@ packages:
     - axi
     - common_verification
   pulp_cluster:
-    revision: e7a99bb56e3eb57c115c12f0719ec9d9fb4ababa
+    revision: 6417d215fdca9a91935998c5623e212e8d29723c
     version: null
     source:
       Git: https://github.com/pulp-platform/pulp_cluster.git
@@ -519,7 +519,7 @@ packages:
     - riscv-dbg
     - tech_cells_generic
   streamer:
-    revision: 791ed68ebf97d81e6c16ef501711ab306a694ba8
+    revision: cada26410f945d1e57e2891c837425275b5a464c
     version: null
     source:
       Git: https://gitlab.thalesdigital.io/musa/streamer.git
