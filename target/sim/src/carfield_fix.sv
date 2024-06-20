@@ -122,6 +122,7 @@ module carfield_soc_fixture;
   logic [NumPhys-1:0]               hyper_reset_no;
 
   logic ptme_clk, ptme_enc;
+  logic tc_active, tc_clock, tc_data;
 
   wire [NumPhys-1:0][NumChips-1:0]  pad_hyper_csn;
   wire [NumPhys-1:0]                pad_hyper_ck;
@@ -218,8 +219,20 @@ module carfield_soc_fixture;
     .hyper_dq_o                 ( hyper_dq_o                ),
     .hyper_dq_oe_o              ( hyper_dq_oe_o             ),
     .hyper_reset_no             ( hyper_reset_no            ),
+    .tc_active_i                ( tc_active                 ),
+    .tc_clock_i                 ( tc_clock                  ),
+    .tc_data_i                  ( tc_data                   ),
     .ptme_clk_o                 ( ptme_clk                  ),
     .ptme_enc_o                 ( ptme_enc                  ),
+    .ptme_sync_o                (                           ),
+    .ptme_ext_clk_i             ( '0                        ),
+    .hpc_addr_o                 (                           ),
+    .hpc_cmd_en_o               (                           ),
+    .hpc_sample_o               (                           ),
+    .llc_line_o                 (                           ),
+    .obt_ext_clk_i              ( '0                        ),
+    .obt_pps_in_i               ( '0                        ),
+    .obt_sync_out_o             (                           ),
     .ext_reg_async_slv_req_i    ( '0                        ),
     .ext_reg_async_slv_ack_o    (                           ),
     .ext_reg_async_slv_data_i   ( '0                        ),
@@ -274,6 +287,9 @@ module carfield_soc_fixture;
     .axi_muxed_rsp ( axi_muxed_rsp ),
     .ptme_clk_i    ( ptme_clk      ),
     .ptme_enc_i    ( ptme_enc      ),
+    .tc_active     ( tc_active     ),     
+    .tc_clk        ( tc_clock      ),
+    .tc_data       ( tc_data       ),
     .*
   );
 

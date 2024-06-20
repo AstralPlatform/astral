@@ -62,4 +62,5 @@ ETH_RGMII_PHY_CLK_DIV_EN,1,rw,hro,1,1,Ethernet RGMII PHY clock divider enable bi
 ETH_RGMII_PHY_CLK_DIV_VALUE,20,rw,hro,1,100,Ethernet RGMII PHY clock divider value
 ETH_MDIO_CLK_DIV_EN,1,rw,hro,1,1,Ethernet MDIO clock divider enable bit
 ETH_MDIO_CLK_DIV_VALUE,20,rw,hro,1,100,Ethernet MDIO clock divider value
-
+STREAMER_CLK_DIV_ENABLE,1,rw,hro,1,0,Streamer clock divider enable
+STREAMER_CLK_DIV_VALUE,6,rw,hro,1,1,Streamer clock divider value
