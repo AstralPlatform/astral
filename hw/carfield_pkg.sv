@@ -738,7 +738,7 @@ typedef logic [     AxiNarrowDataWidth-1:0] car_nar_dataw_t;
 typedef logic [        AxiNarrowStrobe-1:0] car_nar_strb_t;
 
 // APB Mapping
-localparam int unsigned NumApbMst = 7;
+localparam int unsigned NumApbMst = 9;
 
 typedef enum int {
   SystemTimerIdx   = 'd0,
@@ -747,7 +747,9 @@ typedef enum int {
   CanIdx           = 'd3,
   HyperBusIdx      = 'd4,
   StreamerCfgIdx   = 'd5,
-  StreamerDataIdx  = 'd6
+  StreamerDataIdx  = 'd6,
+  SpWRegBusIdx     = 'd7,
+  SpWApbBusIdx     = 'd8
 } carfield_peripherals_e;
 
 // Address map of peripheral system
@@ -778,7 +780,13 @@ localparam carfield_addr_map_rule_t [NumApbMst-1:0] PeriphApbAddrMapRule = '{
                             end_addr: StreamerCfgBase + StreamerCfgSize },
   // 6: Streamer Data
   '{ idx: StreamerDataIdx,  start_addr: StreamerApbBase,
-                            end_addr: StreamerApbBase + StreamerApbSize }
+                            end_addr: StreamerApbBase + StreamerApbSize },
+  // 7: SpW Reg Bus
+  '{ idx: SpWRegBusIdx,  start_addr: SpaceWireRegBase,
+                         end_addr: SpaceWireRegBase + SpaceWireRegSize },
+    // 98: SpW APB Bus
+  '{ idx: SpWApbBusIdx,  start_addr: SpaceWireApbBase,
+                         end_addr: SpaceWireApbBase + SpaceWireApbSize }
 };
 
 // Narrow reg types

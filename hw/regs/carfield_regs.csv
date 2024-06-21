@@ -64,3 +64,5 @@ ETH_MDIO_CLK_DIV_EN,1,rw,hro,1,1,Ethernet MDIO clock divider enable bit
 ETH_MDIO_CLK_DIV_VALUE,20,rw,hro,1,100,Ethernet MDIO clock divider value
 STREAMER_CLK_DIV_ENABLE,1,rw,hro,1,0,Streamer clock divider enable
 STREAMER_CLK_DIV_VALUE,6,rw,hro,1,1,Streamer clock divider value
+STREAMER_GENERAL_IRQ,1,rw,hwo,1,0,Streamer general interrupt
+SPW_GENERAL_IRQ,1,rw,hwo,1,0,SpaceWire general interrupt
