@@ -169,8 +169,8 @@ packages:
     dependencies:
     - hci
   common_cells:
-    revision: 0d67563b6b592549542544f1abc0f43e5d4ee8b4
-    version: 1.35.0
+    revision: be3866eb3ed5b8ac7bc9a9ec9f8ae86137cd0a45
+    version: 1.36.0
     source:
       Git: https://github.com/pulp-platform/common_cells.git
     dependencies:
@@ -508,7 +508,7 @@ packages:
     revision: 415d807b3a7ef455fb574ef6c8b8cfa205edabba
     version: null
     source:
-      Git: git@gitlab.thalesdigital.io:musa/spacewire.git
+      Git: https://gitlab.thalesdigital.io/musa/spacewire.git
     dependencies: []
   spatz:
     revision: 98de97f24fe42675c9b4a8cc08354a03af57400a
@@ -525,7 +525,7 @@ packages:
     - riscv-dbg
     - tech_cells_generic
   streamer:
-    revision: 734a4ce7ce40c73a35f6c0be527b55741895c5d8
+    revision: bb9c6240936544a3033d12f41865b7b6fdb6d0b3
     version: null
     source:
       Git: https://gitlab.thalesdigital.io/musa/streamer.git
