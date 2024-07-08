@@ -296,8 +296,8 @@ packages:
       Git: https://github.com/pulp-platform/icache-intc.git
     dependencies: []
   idma:
-    revision: 95f366e56f7e772c283fb3c8b343afc4a3978375
-    version: 0.6.2
+    revision: c12caf59bb482fe44b27361f6924ad346b2d22fe
+    version: 0.6.3
     source:
       Git: https://github.com/pulp-platform/idma.git
     dependencies:
@@ -525,7 +525,7 @@ packages:
     - riscv-dbg
     - tech_cells_generic
   streamer:
-    revision: a6a5a823f36473da424c135d115afb4d28213de5
+    revision: 734a4ce7ce40c73a35f6c0be527b55741895c5d8
     version: null
     source:
       Git: https://gitlab.thalesdigital.io/musa/streamer.git
