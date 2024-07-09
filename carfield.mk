@@ -20,7 +20,7 @@
 CAR_ROOT    ?= $(shell $(BENDER) path carfield)
 CAR_HW_DIR  := $(CAR_ROOT)/hw
 CAR_SW_DIR  := $(CAR_ROOT)/sw
-CAR_TGT_DIR := $(CAR_ROOT)/target/
+CAR_TGT_DIR := $(CAR_ROOT)/target
 CAR_XIL_DIR := $(CAR_TGT_DIR)/xilinx
 CAR_SIM_DIR := $(CAR_TGT_DIR)/sim
 SECD_ROOT ?= $(shell $(BENDER) path opentitan)
@@ -100,6 +100,12 @@ SPATZD_MAKEDIR  := $(SPATZD_ROOT)/hw/system/spatz_cluster
 SPATZD_BINARY   ?=
 SPATZD_BOOTMODE ?= 0 # default jtag bootmode
 
+# Streamer, implementing telecommand and telemetry protocols
+STREAMER_ROOT ?= $(shell $(BENDER) path streamer)
+
+# SpaceWire IP
+SPACEWIRE_ROOT ?= $(shell $(BENDER) path spacewire)
+
 ###########################
 # System HW configuration #
 ###########################
@@ -167,7 +173,7 @@ SAFED_SW_BUILD := safed-sw-build
 SAFED_SW_INIT := safed-sw-init
 endif
 
-ifeq ($(shell echo $(SAFED_PRESENT)), 1)
+ifeq ($(shell echo $(SPATZD_PRESENT)), 1)
 SPATZD_HW_INIT := spatzd-hw-init
 endif
 

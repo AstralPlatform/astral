@@ -35,6 +35,9 @@ RUNTIME_DEFINES := +define+HYP_USER_PRELOAD="$(HYP_USER_PRELOAD)"
 RUNTIME_DEFINES += +define+HYP0_PRELOAD_MEM_FILE=\"$(HYP0_PRELOAD_MEM_FILE)\"
 RUNTIME_DEFINES += +define+HYP1_PRELOAD_MEM_FILE=\"$(HYP1_PRELOAD_MEM_FILE)\"
 
+TASI_LIB += vlib $ROOT/working_dir/streamer/TASI_generic_Lib
+TASI_LIB += vmap TASI_generic_Lib $ROOT/working_dir/streamer/TASI_generic_Lib
+
 #############
 # Questasim #
 #############
@@ -59,6 +62,12 @@ endif
 .PHONY: $(CAR_VSIM_DIR)/compile.carfield_soc.tcl
 $(CAR_VSIM_DIR)/compile.carfield_soc.tcl:
 	$(BENDER) script vsim $(common_targs) $(sim_targs) $(sim_defs) $(common_defs) $(safed_defs) --vlog-arg="$(RUNTIME_DEFINES)" --compilation-mode separate > $@
+	sed -i '2a\
+	set VsimDir "$(CAR_VSIM_DIR)"\
+	set TCTMPATH "$(STREAMER_ROOT)"\
+	set SPWPATH "$(SPACEWIRE_ROOT)"\
+	source $(STREAMER_ROOT)/astral.compile.tcl \
+	source $(SPACEWIRE_ROOT)/astr_compile.tcl' $@
 	echo 'vlog "$(CHS_ROOT)/target/sim/src/elfloader.cpp" -ccflags "-std=c++11"' >> $@
 	echo 'vopt $(VOPT_FLAGS) $(TBENCH) -o $(TBENCH)_opt' >> $@
 
@@ -78,7 +87,7 @@ car-vsim-sim-build: $(CAR_VSIM_DIR)/compile.carfield_soc.tcl
 .PHONY: car-vsim-sim-clean
 ## Remove all Questasim simulation build artifacts
 car-vsim-sim-clean:
-	rm -rf $(CAR_VSIM_DIR)/uart $(CAR_VSIM_DIR)/FETCH* $(CAR_VSIM_DIR)/logs $(CAR_VSIM_DIR)/*.ini $(CAR_VSIM_DIR)/trace* $(CAR_VSIM_DIR)/*.wlf $(CAR_VSIM_DIR)/transcript $(CAR_VSIM_DIR)/work
+	rm -rf $(CAR_VSIM_DIR)/uart $(CAR_VSIM_DIR)/FETCH* $(CAR_VSIM_DIR)/logs $(CAR_VSIM_DIR)/*.ini $(CAR_VSIM_DIR)/trace* $(CAR_VSIM_DIR)/*.wlf $(CAR_VSIM_DIR)/transcript $(CAR_VSIM_DIR)/work $(CAR_VSIM_DIR)/*lib $(CAR_VSIM_DIR)/*Lib $(CAR_VSIM_DIR)/*.vstf $(CAR_VSIM_DIR)/*.log $(CAR_VSIM_DIR)/*.txt
 
 .PHONY: car-vsim-sim-run
 ## Run simulation of the carfield RTL.
